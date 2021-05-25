@@ -9,7 +9,6 @@ import ProviderBlock from './ProvideBlock';
 
 const Dashboard = ({ onSignOut }) => {
   const { profile } = useProfile();
-
   const onSave = async newData => {
     const userNicknameRef = database
       .ref(`/profiles/${profile.uid}`)

@@ -34,6 +34,7 @@ const Bottom = () => {
     if (input.trim === '') {
       return;
     }
+
     const msgData = assembleMessage(profile, chatId);
     msgData.text = input;
 

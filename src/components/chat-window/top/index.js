@@ -5,6 +5,7 @@ import { ButtonToolbar, Icon } from 'rsuite';
 import { useMediaQuery } from '../../../context/custom-hooks';
 import { useCurrentRoom } from '../../../context/current-room.context';
 import RoomInfoBtnModal from './RoomInfoBtnModal';
+import EditRoomBtnDrawer from './EditRoomBtnDrawer';
 
 const Top = () => {
   const name = useCurrentRoom(v => v.name);
@@ -26,7 +27,9 @@ const Top = () => {
           />
           <span className="text-disappear">{name}</span>
         </h4>
-        <ButtonToolbar className="ws-nowrap">todo</ButtonToolbar>
+        <ButtonToolbar className="ws-nowrap">
+          <EditRoomBtnDrawer />
+        </ButtonToolbar>
       </div>
       <div className="d-flex justify-content-between align-items-center">
         <span>todo</span>

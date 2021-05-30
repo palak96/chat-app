@@ -7,6 +7,7 @@ import { useHover } from '../../../context/custom-hooks';
 import { auth } from '../../../misc/firebase';
 import PresenceDot from '../../PresenceDot';
 import ProfileAvatar from '../../ProfileAvatar';
+import IconBtnControl from './IconBtnControl';
 import ProfileInfoBtnModal from './ProfileInfoBtnModal';
 
 const MessageItem = ({ message, handleAdmin }) => {
@@ -50,6 +51,15 @@ const MessageItem = ({ message, handleAdmin }) => {
         <TimeAgo
           className="font-normal text-black-45 ml-2"
           datetime={createdAt}
+        />
+        <IconBtnControl
+          // eslint-disable-next-line no-constant-condition
+          {...(true ? { color: 'red' } : {})}
+          isVisible
+          iconName="heart"
+          tooltip="Like this message"
+          onClick={() => {}}
+          badgeContent={5}
         />
       </div>
       <div>

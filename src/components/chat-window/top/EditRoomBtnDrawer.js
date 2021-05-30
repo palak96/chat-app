@@ -55,7 +55,7 @@ const EditRoomBtnDrawer = () => {
           <EditableInput
             componentClass="textarea"
             rows={5}
-            intitalValue={description}
+            initialValue={description}
             onSave={onDescriptionSave}
             label={<h6 className="mb-2">Description</h6>}
             emptyInput="Description cannot be empty"
